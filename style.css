@@ -989,9 +989,39 @@ section:nth-child(odd) .animate.scroll,
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
+/* 3D Animated Contact Icons */
+.contact-3d-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 2rem 0;
+    perspective: 1000px;
+}
+
+.contact-3d-icons .icon {
+    width: 60px;
+    height: 60px;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000;
+    font-size: 28px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.contact-3d-icons .icon:hover {
+    transform: rotateY(20deg) rotateX(20deg) scale(1.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
 /* Individual Colors */
 .icon.insta { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); color: #fff; }
 .icon.email { background: #ff4d4d; color: #fff; }
 .icon.leetcode { background: #f89f1b; color: #000; }
 .icon.github { background: #333; color: #fff; }
 .icon.linkedin { background: #0077b5; color: #fff; }
+
