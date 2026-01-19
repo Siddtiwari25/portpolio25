@@ -1016,6 +1016,14 @@ section:nth-child(odd) .animate.scroll,
     margin: 2rem 0;
     perspective: 1000px;
 }
+/* 3D Animated Contact Icons */
+.contact-3d-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 2rem 0;
+    perspective: 1000px;
+}
 
 .contact-3d-icons .icon {
     width: 60px;
