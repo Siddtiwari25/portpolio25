@@ -47,3 +47,12 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+/* Add this to the existing .animate.scroll rules */
+.projects .project-box .animate.scroll {
+    width: 105%;
+}
+
+.projects.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+}
