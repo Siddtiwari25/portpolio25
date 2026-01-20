@@ -1451,25 +1451,6 @@ section:nth-child(odd) .animate.scroll,
     perspective: 1000px;
 }
 
-.contact-3d-icons .icon {
-    width: 60px;
-    height: 60px;
-    background: var(--main-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #000;
-    font-size: 28px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    transform-style: preserve-3d;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.contact-3d-icons .icon:hover {
-    transform: rotateY(20deg) rotateX(20deg) scale(1.2);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
 .home {
     display: flex;
     align-items: center;
