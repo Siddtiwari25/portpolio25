@@ -872,10 +872,10 @@ span {
 
 .resume iframe {
     width: 100%;
-    height: 500px;
-    border: 2px solid var(--main-color);
+    height: 600px;
+    border: 1px solid var(--main-color);
     border-radius: 10px;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .resume .btn-box.btns {
