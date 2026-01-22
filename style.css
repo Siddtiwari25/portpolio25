@@ -1099,16 +1099,6 @@ section:nth-child(odd) .animate.scroll,
         width: 100%;
     }
 
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer p {
-        margin-top: 2rem;
-        text-align: center;
-    }
-}
-
 @media (max-width: 371px) {
     .home {
         justify-content: center;
