@@ -885,12 +885,12 @@ span {
 .resume .btn-box.btns {
     display: flex;
     justify-content: center;
-    gap: 100rem;
+    gap: 10rem;
     margin-top: 1rem;
 }
 
 .resume .btn-box.btns .btn {
-    width: 100rem;
+    width: 50rem;
 }
 <!-- ===== Footer CSS (replace existing footer styles in style.css) ===== -->
 <style>
@@ -1378,98 +1378,6 @@ body {
         height: 24px;
     }
 }
-.name {
-  color: #00abf0;
-}
-@media (max-width: 768px) {
-
-  .header {
-    padding: 10px 5%;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #081b29;
-    display: none;
-    flex-direction: column;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  .home-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .home-content p {
-    font-size: 0.95rem;
-  }
-}
-#menu-icon {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    background: var(--bg-color);
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-}
-.filter-buttons button {
-  min-height: 44px; /* Apple + Android touch standard */
-  touch-action: manipulation;
-}
-.project-card {
-  animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-input,
-textarea {
-  font-size: 16px; /* prevents auto-zoom */
-}
-button {
-  min-height: 44px;
-}
-if (!window.emailjs) {
-  console.error("EmailJS not loaded");
-}
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  height: 3px;
-  will-change: width;
-}
-
-
 
 
 

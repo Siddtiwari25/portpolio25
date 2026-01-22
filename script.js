@@ -1,67 +1,63 @@
-document.addEventListener("DOMContentLoaded", () => {
 
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
 
-  // Typing effect
-  const textArray = ["Web Developer", "Frontend Developer", "UI Designer"];
-  let index = 0, charIndex = 0;
-  const typingElement = document.querySelector(".typing");
+// toggle icon navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-  function typeEffect() {
-    if (!typingElement) return;
-    if (charIndex < textArray[index].length) {
-      typingElement.textContent += textArray[index].charAt(charIndex++);
-      setTimeout(typeEffect, 100);
-    } else {
-      setTimeout(eraseEffect, 1500);
-    }
-  }
-
-  function eraseEffect() {
-    if (charIndex > 0) {
-      typingElement.textContent = textArray[index].substring(0, --charIndex);
-      setTimeout(eraseEffect, 60);
-    } else {
-      index = (index + 1) % textArray.length;
-      setTimeout(typeEffect, 500);
-    }
-  }
-
-  typeEffect();
-
-  // Mobile menu toggle
-  const menuIcon = document.getElementById("menu-icon");
-  const navbar = document.querySelector(".navbar");
-
-  menuIcon.onclick = () => {
-    navbar.classList.toggle("active");
-  };
-});
-menuIcon.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});
-if (!window.emailjs) {
-  console.error("EmailJS not loaded");
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
 }
-let ticking = false;
 
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      const scrollTop = document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+// scroll sections
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-      document.getElementById("scroll-progress").style.width =
-        (scrollTop / height) * 100 + "%";
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 100;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
-      ticking = false;
+        if(top >= offset && top < offset + height) {
+            // active navbar links
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+            // active sections for animation on scroll
+            sec.classList.add('show-animate');
+        }
+        // if want to animation that repeats on scroll use this
+        else {
+            sec.classList.remove('show-animate');
+        }
     });
-    ticking = true;
-  }
-});
 
+    // sticky navbar
+    let header = document.querySelector('header');
+
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    // remove toggle icon and navbar when click navbar links (scroll)
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+
+    // animation footer on scroll
+    let footer = document.querySelector('footer');
+
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+}
+
+// Contact form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    }
+});
