@@ -1332,4 +1332,20 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+.home-img img {
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
