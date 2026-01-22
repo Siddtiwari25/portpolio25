@@ -1231,7 +1231,7 @@ section:nth-child(odd) .animate.scroll,
 .footer {
     width: 100%;
     padding: 20px 5%;
-    background: #081b29;
+    background: #112e42;
     position: relative;
     bottom: 0;
 }
@@ -1244,7 +1244,7 @@ section:nth-child(odd) .animate.scroll,
 }
 
 body {
-    min-height: 100vh;
+    min-height: 200vh;
 }
 @media (max-width: 768px) {
 
