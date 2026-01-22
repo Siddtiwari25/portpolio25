@@ -12,9 +12,9 @@
 }
 
 :root {
-    --bg-color: #081b29;
+    --bg-color: hsl(205, 66%, 54%);
     --second-bg-color: #112e42;
-    --text-color: #ededed;
+    --text-color: #1c37cd;
     --main-color: #00abf0;
 }
 
@@ -1357,7 +1357,3 @@ body {
         height: 24px;
     }
 }
-
-
-
-
