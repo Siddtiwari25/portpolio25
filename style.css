@@ -1367,6 +1367,25 @@ body {
     border-radius: 5px;
     transition: width 1.5s ease;
 }
+.skill-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.skill-title img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    .skill-title img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 
 
 
