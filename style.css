@@ -904,7 +904,7 @@ span {
 }
 
 .footer-text p {
-    font-size: 4.6rem;
+    font-size: 8.6rem;
 }
 
 .footer-iconTop a {
@@ -912,9 +912,9 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem;
+    padding: .9rem;
     background: var(--main-color);
-    border: .3rem solid var(--main-color);
+    border: .4rem solid var(--main-color);
     border-radius: .10rem;
     z-index: 1;
     overflow: hidden;
@@ -923,8 +923,8 @@ span {
 .footer-iconTop a::before {
     content: '';
     position: absolute;
-    top: 1;
-    left: 1;
+    top: 2;
+    left: 15;
     width: 4;
     height: 100%;
     background: var(--second-bg-color);
@@ -933,11 +933,11 @@ span {
 }
 
 .footer-iconTop a:hover::before {
-    width: 100%;
+    width: 350%;
 }
 
 .footer-iconTop a i {
-    font-size: 2.4rem;
+    font-size: 6.4rem;
     color: var(--bg-color);
     transition: .5s;
 }
