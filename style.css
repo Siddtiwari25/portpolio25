@@ -891,63 +891,92 @@ span {
 .resume .btn-box.btns .btn {
     width: 50rem;
 }
+<!-- ===== Redesigned Footer (Information Unchanged) ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Portfolio</h3>
+      <p>
+        Copyright © 2024<br>
+        Designed and Maintenance by <strong>SIDDHARTH TIWARI</strong><br>
+        All Rights Reserved
+      </p>
+    </div>
 
+    <div class="footer-right">
+      <h2>Back to Top</h2>
+      <a href="#" class="top-btn" aria-label="Back to top">
+        <i class='bx bx-up-arrow-alt'></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Footer CSS (replace existing footer styles in style.css) ===== -->
+<style>
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--second-bg-color);
+  background: #0b0f1a;
+  color: #ffffff;
+  padding: 3rem 1.5rem;
 }
 
-.footer-text,
-.footer-iconTop {
-    position: relative;
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.footer-text p {
-    font-size: 8.6rem;
+.footer-left h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer-iconTop a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .9rem;
-    background: var(--main-color);
-    border: .4rem solid var(--main-color);
-    border-radius: .10rem;
-    z-index: 1;
-    overflow: hidden;
+.footer-left p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
-.footer-iconTop a::before {
-    content: '';
-    position: absolute;
-    top: 2;
-    left: 15;
-    width: 4;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
-    transition: .5s;
+.footer-right {
+  text-align: center;
 }
 
-.footer-iconTop a:hover::before {
-    width: 350%;
+.footer-right h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer-iconTop a i {
-    font-size: 6.4rem;
-    color: var(--bg-color);
-    transition: .5s;
+.top-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.footer-iconTop a:hover i {
-    color: var(--main-color);
+.top-btn:hover {
+  background: #6366f1;
+  transform: translateY(-4px);
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
 
 /* ANIMATION RELOAD AND SCROLL */
 .animate {
