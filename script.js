@@ -40,3 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.toggle("active");
   };
 });
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
+if (!window.emailjs) {
+  console.error("EmailJS not loaded");
+}
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrollTop = document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      document.getElementById("scroll-progress").style.width =
+        (scrollTop / height) * 100 + "%";
+
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
