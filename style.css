@@ -1378,6 +1378,38 @@ body {
         height: 24px;
     }
 }
+.name {
+  color: #00abf0;
+}
+@media (max-width: 768px) {
+
+  .header {
+    padding: 10px 5%;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #081b29;
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .home-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 
