@@ -1228,3 +1228,54 @@ section:nth-child(odd) .animate.scroll,
         width: 0;
     }
 }
+.footer {
+    width: 100%;
+    padding: 20px 5%;
+    background: #081b29;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+}
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 50px;
+    }
+
+    .home-img img {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 0.9rem;
+    }
+}
