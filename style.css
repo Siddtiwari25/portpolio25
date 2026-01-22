@@ -1179,7 +1179,7 @@ section:nth-child(odd) .animate.scroll,
 <!-- ===== Footer CSS (replace existing footer styles in style.css) ===== -->
 <style>
 .footer {
-  background: #081b29;
+  background:  #112e42;
   color: #ffffff;
   padding: 3rem 1.5rem;
 }
