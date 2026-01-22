@@ -1279,3 +1279,11 @@ body {
         font-size: 0.9rem;
     }
 }
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
