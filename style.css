@@ -885,12 +885,12 @@ span {
 .resume .btn-box.btns {
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    gap: 100rem;
     margin-top: 1rem;
 }
 
 .resume .btn-box.btns .btn {
-    width: 50rem;
+    width: 100rem;
 }
 <!-- ===== Footer CSS (replace existing footer styles in style.css) ===== -->
 <style>
