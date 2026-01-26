@@ -894,7 +894,7 @@ span {
     width: 100%;
 }
 .footer-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     display: grid;
     /* Use min() to ensure it never exceeds 100% of the screen width */
