@@ -82,19 +82,15 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
+
 .home {
-    height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
-
-    background-image: url("photo/Portfolio Presentation.jpg .png");
-    
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url('..') no-repeat;
     background-size: cover;
+    background-position: center;
 }
-
 
 .home-content {
     max-width: 60rem;
@@ -892,70 +888,63 @@ span {
 .resume .btn-box.btns .btn {
     width: 50rem;
 }
-<!-- ===== Footer CSS (replace existing footer styles in style.css) ===== -->
-<style>
+
 .footer {
-  background: #0b0f1a;
-  color: #ffffff;
-  padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
 }
 
-.footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+.footer-text,
+.footer-iconTop {
+    position: relative;
 }
 
-.footer-left h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+.footer-text p {
+    font-size: 8.6rem;
 }
 
-.footer-left p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.85;
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .9rem;
+    background: var(--main-color);
+    border: .4rem solid var(--main-color);
+    border-radius: .10rem;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.footer-right {
-  text-align: center;
+.footer-iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 2;
+    left: 15;
+    width: 4;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
 }
 
-.footer-right h2 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+.footer-iconTop a:hover::before {
+    width: 350%;
 }
 
-.top-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #4f46e5;
-  color: #ffffff;
-  font-size: 1.4rem;
-  text-decoration: none;
-  transition: transform 0.3s ease, background 0.3s ease;
+.footer-iconTop a i {
+    font-size: 6.4rem;
+    color: var(--bg-color);
+    transition: .5s;
 }
 
-.top-btn:hover {
-  background: #6366f1;
-  transform: translateY(-4px);
+.footer-iconTop a:hover i {
+    color: var(--main-color);
 }
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-</style>
 
 /* ANIMATION RELOAD AND SCROLL */
 .animate {
@@ -1239,6 +1228,21 @@ section:nth-child(odd) .animate.scroll,
         width: 0;
     }
 }
+.footer {
+    width: 100%;
+    padding: 20px 5%;
+    background: #112e42;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 body {
     min-height: 200vh;
 }
@@ -1282,282 +1286,4 @@ body {
 html {
     scroll-behavior: smooth;
 }
-.btn {
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-.home-img img {
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-}
-.navbar a {
-    position: relative;
-}
-
-.navbar a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: #00abf0;
-    transition: width 0.3s;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-}
-body {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.home-img img {
-    animation: floatImage 4s ease-in-out infinite;
-}
-
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-.skill-bar {
-    margin-bottom: 20px;
-}
-
-.bar {
-    width: 100%;
-    height: 10px;
-    background: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.bar span {
-    display: block;
-    height: 100%;
-    width: 0;
-    background: #00abf0;
-    border-radius: 5px;
-    transition: width 1.5s ease;
-}
-.skill-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
-}
-
-.skill-title img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-@media (max-width: 768px) {
-    .skill-title img {
-        width: 24px;
-        height: 24px;
-    }
-}
-/* Step 1: Basic Grid Setup - No animations yet */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --gutter: 2rem;
-}
-
-@media (max-width: 600px) {
-  :root {
-    --gutter: 1rem;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
-  background: #000;
-  color: #fff;
-}
-
-.content-wrap {
-  background: #000;
-  overflow: clip;
-}
-
-/* Header */
-header {
-  min-height: 100vh;
-  display: grid;
-  align-content: center;
-  max-width: calc(100% - (2 * var(--gutter)));
-  padding-left: 48px;
-  text-align: left;
-}
-
-h2 {
-  padding-top: 12px;
-}
-
-a {
-  color:white;
-}
-
-.fluid {
-  font-size: clamp(4rem, 12vw, 12rem);
-  line-height: 0.6;
-  margin: 0;
-}
-
-h2.fluid {
-  font-size: clamp(0.5rem, 2vw, 1.5rem);
-  padding-top: 48px;
-}
-
-/* Section setup - Sticky spacer trick */
-main section:first-of-type {
-  min-height: 240vh; /* Extra height for scroll space */
-}
-
-.content {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  place-items: center;
-  align-content: center;
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-}
-
-main section:last-of-type {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-/* Grid Layout - 5 columns x 3 rows */
-.grid {
-  --offset: 0;
-  --container-width: 1600px;
-  --gap: clamp(10px, 7.35vw, 80px);
-
-  width: var(--container-width);
-  max-width: calc(100% - (2 * var(--gutter)));
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: var(--gap);
-  margin: 0 auto;
-  align-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-    --offset: -1;
-  }
-  
-  .grid > .layer:nth-of-type(1) {
-    display: none;
-  }
-}
-
-/* Layers using subgrid */
-.grid > .layer {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
-}
-
-/* Layer 1: Outer edges - odd on left column, even on right column */
-.grid > .layer:nth-of-type(1) div:nth-of-type(odd) {
-  grid-column: 1;
-}
-
-.grid > .layer:nth-of-type(1) div:nth-of-type(even) {
-  grid-column: -2;
-}
-
-/* Layer 2: Inner columns */
-.grid > .layer:nth-of-type(2) div:nth-of-type(odd) {
-  grid-column: calc(2 + var(--offset));
-}
-
-.grid > .layer:nth-of-type(2) div:nth-of-type(even) {
-  grid-column: calc(-3 - var(--offset));
-}
-
-/* Layer 3: Center column top and bottom */
-.grid > .layer:nth-of-type(3) div:first-of-type {
-  grid-column: calc(3 + var(--offset));
-  grid-row: 1;
-}
-
-.grid > .layer:nth-of-type(3) div:last-of-type {
-  grid-column: calc(3 + var(--offset));
-  grid-row: -1;
-}
-
-.grid img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-.grid .scaler {
-  position: relative;
-  grid-area: 2 / calc(3 + var(--offset));
-}
-
-.scaler {
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  position: relative;
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    object-fit: cover;
-    border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
-
 

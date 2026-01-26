@@ -10,72 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
-    <script>
-const textArray = ["Web Developer", "Frontend Developer", "UI Designer"];
-let index = 0;
-let charIndex = 0;
-const typingElement = document.querySelector(".typing");
-
-function typeEffect() {
-    if (charIndex < textArray[index].length) {
-        typingElement.textContent += textArray[index].charAt(charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 100);
-    } else {
-        setTimeout(eraseEffect, 1500);
-    }
-}
-
-function eraseEffect() {
-    if (charIndex > 0) {
-        typingElement.textContent = textArray[index].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(eraseEffect, 60);
-    } else {
-        index = (index + 1) % textArray.length;
-        setTimeout(typeEffect, 500);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", typeEffect);
-</script>
-<script>
-const skillBars = document.querySelectorAll('.bar span');
-
-function showProgress() {
-    skillBars.forEach(bar => {
-        const value = bar.getAttribute('data-progress');
-        bar.style.width = value + '%';
-    });
-}
-
-let skillsSection = document.querySelector('.skills');
-
-window.addEventListener('scroll', () => {
-    let sectionPos = skillsSection.getBoundingClientRect().top;
-    let screenPos = window.innerHeight / 1.3;
-
-    if (sectionPos < screenPos) {
-        showProgress();
-    }
-});
-</script>
-
-
 
 <body>
 
@@ -103,7 +42,7 @@ window.addEventListener('scroll', () => {
     <!-- home section design -->
     <section class="home show-animate" id="home">
         <div class="home-content">
-            <h2>I'm a  <span>  <h2>SIDDHATH TIWARI</h2> </span> <span class="animate" style="--i:2;"></span></h2>
+            <h1>Hi, I'm <span>SIDDHATH TIWARI</span><span class="animate" style="--i:2;"></span></h1>
             <div class="text-animate">
                 <h3>AIML, WEB DEVELOPER </h3>
                 <span class="animate" style="--i:3;"></span>
@@ -115,14 +54,22 @@ web development, and Python to build scalable products and learn from top engine
             </p>
 
             <div class="btn-box">
-                <div class="btn-box">
-    <a href="https://www.instagram.com/reels/DLH2eY-vm0y/?next=%2F&hl=en" target="_blank" class="btn">Hire Me</a>
-    <a href="#contact" class="btn">Let's Talk</a>
-</div>
-
+                <a href="#" class="btn">Hire Me</a>
+                <a href="#" class="btn">Let's Talk</a>
                 <span class="animate" style="--i:5;"></span>
             </div>
         </div>
+
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <span class="animate" style="--i:6;"></span>
+        </div>
+        <div class="home-img">
+    <img src="photo/Portfolio Presentation.jpg="" loading="lazy">
+
+</div>
 
             
         </div>
@@ -246,7 +193,8 @@ web development, and Python to build scalable products and learn from top engine
             </div>
         </div>
     </section>
-     <!-- skills section design -->
+
+    <!-- skills section design -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span><span class="animate scroll" style="--i:1;"></span></h2>
 
@@ -311,8 +259,7 @@ web development, and Python to build scalable products and learn from top engine
                 </div>
             </div>
         </div>
-
-  
+    </section> 
     <!-- live project demo section design -->
     <section class="projects" id="projects">
         <h2 class="heading">Live <span>Projects</span><span class="animate scroll" style="--i:1;"></span></h2>
@@ -490,99 +437,28 @@ web development, and Python to build scalable products and learn from top engine
             </div>
         </form>
     </section>
-        <body>
-  <div class="content-wrap">
-    <header>
-    <main>
-      <section>
-        <div class="content">
-          <div class="grid">
-            <!-- Layer 1: Outer edges (6 images) -->
-            <div class="layer">
-              <div>
-                <img src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1556304044-0699e31c6a34?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTJ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1590330297626-d7aff25a0431?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxmYXNoaW9ufGVufDB8fDB8fHww" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk1fHxmYXNoaW9ufGVufDB8fDB8fHww" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fG1vZGVsJTIwZmFzaGlvbiUyMHN0cmVldHxlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1565321590372-09331b9dd1eb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFpciUyMGpvcmRhbnxlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-            </div>
-            <!-- Layer 2: Inner columns (6 images) -->
-            <div class="layer">
-              <div>
-                <img src="https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjM4fHxwcm9kdWN0fGVufDB8fDB8fHww" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1637414165749-9b3cd88b8271?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHRlY2glMjBwcm9kdWN0fGVufDB8fDB8fHww" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1699911251220-8e0de3b5ce88?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b25ld2hlZWx8ZW58MHx8MHx8fDA%3D" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1667483629944-6414ad0648c5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGx1eHVyeSUyMHdhdGNofGVufDB8fDB8fHww" alt="" />
-              </div>
-              <div>
-                <img src="https://plus.unsplash.com/premium_photo-1706078438060-d76ced26d8d5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGNhbWVyYSUyMHBvbGFyb2lkfGVufDB8fDB8fHww" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1525385444278-b7968e7e28dc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGl0ZW18ZW58MHx8MHx8fDA%3D" alt="" />
-              </div>
-            </div>
-            <!-- Layer 3: Center column top and bottom (2 images) -->
-            <div class="layer">
-              <div>
-                <img src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXRlbXxlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div>
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-            </div>
-            <!-- Center scaler image -->
-            <div class="scaler">
-              <img src="https://assets.codepen.io/605876/model-shades.jpg?format=auto&quality=100" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2 class="fluid">fin.</h2>
-      </section>
-    </main>
-  </div>
-</body>
 
 
-        <!-- ===== Redesigned Footer (Information Unchanged) ===== -->
+
 <footer class="footer">
-<div class="footer-container">
-<div class="footer-left">
-<h3>Portfolio</h3>
-<p>
-Copyright © 2024<br>
-Designed and Maintenance by <strong>SIDDHARTH TIWARI</strong><br>
-All Rights Reserved
-</p>
-</div>
+    <div class="footer-container">
 
+        <div class="footer-left">
+            <h3>Portfolio</h3>
+            <p>
+                Copyright &copy; 2024 <br>
+                Designed and Maintenance by <strong>SIDDHARTH TIWARI</strong><br>
+                All Rights Reserved
+            </p>
+        </div>
+        <div class="footer-right">
+            <h4>Back to Top</h4>
+            <a href="#" class="top-btn">
+                <i class='bx bx-up-arrow-alt'></i>
+            </a>
+        </div>
 
-<div class="footer-right">
-<h2>Back to Top</h2>
-<a href="#" class="top-btn" aria-label="Back to top">
-<i class='bx bx-up-arrow-alt'></i>
-</a>
-</div>
-</div>
+    </div>
 </footer>
 
 
