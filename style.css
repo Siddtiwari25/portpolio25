@@ -890,12 +890,12 @@ span {
 }
 /* ===== Footer ===== */
 .footer {
-    background: var( --main-color);
+    background: var( --bg-color);
     padding: 2.5rem 5%;
 }
 
 .footer-container {
-    max-width: 850px;
+    max-width: 1600px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -930,7 +930,7 @@ span {
 
 .back-to-top:hover {
     transform: translateY(-5px);
-    background:  #00abf0;
+    background:  #081b29;
 }
 
 /* Mobile */
