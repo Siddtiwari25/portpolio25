@@ -893,16 +893,17 @@ span {
     padding: 3rem 5%;
     width: 100%;
 }
-
-/* Container */
 .footer-container {
-    max-width: 1200px; /* safer for all screens */
+    max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Use min() to ensure it never exceeds 100% of the screen width */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 3rem;
     align-items: start;
+    padding: 0 1rem; /* Essential for mobile edge spacing */
 }
+
 
 /* Brand */
 .footer-brand h3 {
