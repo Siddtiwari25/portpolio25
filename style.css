@@ -888,7 +888,6 @@ span {
 .resume .btn-box.btns .btn {
     width: 50rem;
 }
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -945,6 +944,7 @@ span {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
+
 
 /* ANIMATION RELOAD AND SCROLL */
 .animate {
@@ -1227,20 +1227,6 @@ section:nth-child(odd) .animate.scroll,
     100% {
         width: 0;
     }
-}
-.footer {
-    width: 100%;
-    padding: 20px 5%;
-    background: #112e42;
-    position: relative;
-    bottom: 0;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
 }
 
 body {
