@@ -890,7 +890,7 @@ span {
 }
 /* ================= FOOTER ================= */
 .footer {
-    background: var(--second-bg-color);
+    background: var(  --bg-color);
     padding: 3rem 5%;
 }
 
