@@ -894,11 +894,11 @@ span {
     width: 100%;
 }
 .footer-container {
-    max-width: 1800px;
+    max-width: 1200px;
     margin: auto;
     display: grid;
     /* Use min() to ensure it never exceeds 100% of the screen width */
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 850px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(50%, 120px), 1fr));
     gap: 3rem;
     align-items: start;
     padding: 0 1rem; /* Essential for mobile edge spacing */
