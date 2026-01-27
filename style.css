@@ -891,84 +891,41 @@ span {
 .footer {
     background: var(--bg-color);
     padding: 3rem 5%;
-    width: 100%;
 }
+
 .footer-container {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    /* Use min() to ensure it never exceeds 100% of the screen width */
-    grid-template-columns: repeat(auto-fit, minmax(min(50%, 120px), 1fr));
-    gap: 3rem;
-    align-items: start;
-    padding: 0 1rem; /* Essential for mobile edge spacing */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
 }
 
-
-/* Brand */
 .footer-brand h3 {
     font-size: 2.4rem;
-    margin-bottom: 1rem;
 }
 
-.footer-brand p {
+.footer-brand p,
+.footer-links a {
     font-size: 1.4rem;
-    line-height: 1.7;
     color: #ccc;
 }
 
-/* Links */
 .footer-links h4 {
-    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .footer-links a {
     display: block;
-    font-size: 1.4rem;
-    color: #ccc;
-    margin-bottom: 0.6rem;
-    transition: color 0.3s ease;
+    margin-bottom: 0.5rem;
 }
 
-.footer-links a:hover {
-    color: var(--main-color);
-}
-
-/* Social + Top */
-.footer-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-}
-
-/* Social icons */
 .footer-social {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap; /* prevents overflow on mobile */
+    flex-wrap: wrap;
 }
 
-.footer-social a {
-    width: 38px;
-    height: 38px;
-    background: var(--main-color);
-    color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 1.8rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-    touch-action: manipulation; /* Chrome mobile tap fix */
-}
-
-.footer-social a:hover {
-    background: #00c8ff;
-    transform: translateY(-4px);
-}
-
-/* Back to top */
 .back-to-top {
     width: 42px;
     height: 42px;
@@ -977,37 +934,13 @@ span {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 2.2rem;
-    color: var(--bg-color);
-    align-self: flex-start;
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.back-to-top:hover {
-    transform: translateY(-5px);
-    background: #00c8ff;
-}
-
-/* ================= MOBILE OPTIMIZATION ================= */
-@media (max-width: 768px) {
-    .footer-container {
-        gap: 2.5rem;
-    }
-}
-
+/* MOBILE FIX */
 @media (max-width: 600px) {
-    .footer {
-        padding: 2.5rem 6%;
-    }
-
     .footer-container {
-        text-align: center;
         grid-template-columns: 1fr;
-        gap: 2.2rem;
-    }
-
-    .footer-actions {
-        align-items: center;
+        text-align: center;
     }
 
     .footer-social {
@@ -1015,19 +948,61 @@ span {
     }
 
     .back-to-top {
-        align-self: center;
+        margin: auto;
     }
 }
+/* ================= TOUCH OPTIMIZED FOOTER ================= */
 
-/* Small mobile Chrome fix */
-@media (max-width: 380px) {
-    .footer-brand p,
+.footer a,
+.footer button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Larger touch areas */
+.footer-links a,
+.footer-social a,
+.back-to-top {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Improve tap spacing */
+.footer-links a {
+    padding: 0.6rem 0;
+}
+
+/* Social icons – better tap comfort */
+.footer-social a {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+}
+
+/* Back to top – thumb friendly */
+.back-to-top {
+    width: 48px;
+    height: 48px;
+    font-size: 2.4rem;
+}
+
+/* Active touch feedback */
+.footer a:active,
+.back-to-top:active {
+    transform: scale(0.92);
+    opacity: 0.85;
+}
+
+/* MOBILE ONLY REFINEMENT */
+@media (max-width: 600px) {
+    .footer-container {
+        gap: 2.4rem;
+    }
+
     .footer-links a {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
-
-
 
 /* ANIMATION RELOAD AND SCROLL */
 .animate {
