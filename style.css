@@ -890,119 +890,47 @@ span {
 }
 .footer {
     background: var(--bg-color);
-    padding: 3rem 5%;
+    padding: 1.8rem 3%;
 }
-
 .footer-container {
-    max-width: 1200px;
+    max-width: 1400px;   /* ↑ wider on large screens */
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
-}
-
-.footer-brand h3 {
-    font-size: 2.4rem;
-}
-
-.footer-brand p,
-.footer-links a {
-    font-size: 1.4rem;
-    color: #ccc;
-}
-
-.footer-links h4 {
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.footer-social {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.back-to-top {
-    width: 42px;
-    height: 42px;
-    background: var(--main-color);
-    display: flex;
+    gap: 1.6rem;         /* ↓ vertical space reduced */
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+}
+.footer-brand p {
+    margin-top: 0.5rem;
+    line-height: 1.5;    /* ↓ */
 }
 
-/* MOBILE FIX */
-@media (max-width: 600px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .back-to-top {
-        margin: auto;
-    }
-}
-/* ================= TOUCH OPTIMIZED FOOTER ================= */
-
-.footer a,
-.footer button {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
-/* Larger touch areas */
-.footer-links a,
-.footer-social a,
-.back-to-top {
-    min-width: 44px;
-    min-height: 44px;
-}
-
-/* Improve tap spacing */
 .footer-links a {
-    padding: 0.6rem 0;
+    margin-bottom: 0.3rem;  /* ↓ */
+    padding: 0.4rem 0;      /* still touch-safe */
+}
+.footer-social a {
+    width: 40px;    /* ↓ visual size */
+    height: 40px;
+    font-size: 1.7rem;
 }
 
-/* Social icons – better tap comfort */
-.footer-social a {
-    width: 44px;
-    height: 44px;
+.back-to-top {
+    width: 40px;
+    height: 40px;
     font-size: 2rem;
 }
-
-/* Back to top – thumb friendly */
-.back-to-top {
-    width: 48px;
-    height: 48px;
-    font-size: 2.4rem;
-}
-
-/* Active touch feedback */
-.footer a:active,
-.back-to-top:active {
-    transform: scale(0.92);
-    opacity: 0.85;
-}
-
-/* MOBILE ONLY REFINEMENT */
 @media (max-width: 600px) {
-    .footer-container {
-        gap: 2.4rem;
+    .footer {
+        padding: 1.6rem 4%;
     }
 
-    .footer-links a {
-        font-size: 1.5rem;
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
     }
 }
+
 
 /* ANIMATION RELOAD AND SCROLL */
 .animate {
