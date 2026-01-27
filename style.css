@@ -1263,7 +1263,7 @@ html {
 :root {
     --image-1: url(https://github.com/Siddtiwari25/SIDDHARTH_TIWARI-portfolio/blob/main/photo/IMG-20221105-WA0008.jpg?format=webp&quality=40);
     --image-2: url(https://github.com/Siddtiwari25/SIDDHARTH_TIWARI-portfolio/blob/main/photo/IMG_20221106_164404_049.jpg?format=webp&quality=40);
-    --image-3: url(https://github.com/Siddtiwari25/SIDDHARTH_TIWARI-portfolio/blob/main/photo/event.jpg?format=webp&quality=40);
+    --image-3: url(photo/event.jpg?format=webp&quality=40);
 }
 
 .animated-gallery {
